@@ -1,0 +1,10 @@
+--- addons/account/account_invoice.py	2017-02-04 06:03:02.000000000 +0100
++++ addons/account/account_invoice.py	2017-12-20 09:58:11.047809081 +0100
+@@ -1468,6 +1468,7 @@
+                         continue
+                     res.append(dict(mres))
+                     res[-1]['price'] = 0.0
++                    res[-1]['quantity'] = 0.0  # should be 0.0 for correct 'entries analysis' reporting
+                     res[-1]['account_analytic_id'] = False
+                 elif not tax_code_id:
+                     continue
